@@ -1,0 +1,22 @@
+{
+  "vwap": {
+    "trades": 1,
+    "wins": 0,
+    "gross_win_usd": 0.0,
+    "gross_loss_usd": 0.15514660298995145,
+    "last_pnls": [
+      -0.1551
+    ],
+    "disabled_until_ts": null
+  },
+  "breakout": {
+    "trades": 1,
+    "wins": 0,
+    "gross_win_usd": 0.0,
+    "gross_loss_usd": 0.06963848000924797,
+    "last_pnls": [
+      -0.0696
+    ],
+    "disabled_until_ts": null
+  }
+}

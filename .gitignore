@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+.env
+.env.local
+.env.*.local
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Data / runtime artifacts
+backend/data/logs/*
+!backend/data/logs/.gitkeep
+backend/data/cache/*
+!backend/data/cache/.gitkeep
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.json
+*.pkl
+*.h5
+models_trained/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets - never commit
+*.key
+*.pem
+wallet_keystore/

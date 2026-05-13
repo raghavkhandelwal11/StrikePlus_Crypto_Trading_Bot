@@ -1,0 +1,331 @@
+2026-05-12 11:35:11.441 | ERROR    | app.engine.orchestrator:_run:129 - orchestrator crashed: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 5
+               │     └ 8
+               └ <function _main at 0x105f77dc0>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 5
+           │    └ <function BaseProcess._bootstrap at 0x105d78670>
+           └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x105d75ca0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x105f93160>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+    │    └ <function subprocess_started at 0x10658edc0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x105f931c0>>
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000)>]
+           │       │   │    └ <function Server.serve at 0x106589ee0>
+           │       │   └ <uvicorn.server.Server object at 0x105f931c0>
+           │       └ <function run at 0x105fa4820>
+           └ <module 'asyncio' from '/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/a...
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x1067e03c0>
+           │    └ <cyfunction Loop.run_until_complete at 0x106808040>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+> File "/Users/gegerot/crypto_trading_bot/backend/app/engine/orchestrator.py", line 120, in _run
+    await self._tick(config)
+          │    │     └ BotConfig(duration_seconds=900, strategy_category=<StrategyCategory.MEDIUM: 'medium'>, auto_switch=True, tokens=['0xbb4CdB9CB...
+          │    └ <function Orchestrator._tick at 0x132aa6ca0>
+          └ <app.engine.orchestrator.Orchestrator object at 0x11c4ce580>
+
+  File "/Users/gegerot/crypto_trading_bot/backend/app/engine/orchestrator.py", line 167, in _tick
+    sig_pair = self.strategy.evaluate(
+               │    │        └ <function StrategyManager.evaluate at 0x11c3f1280>
+               │    └ <app.engine.strategies.manager.StrategyManager object at 0x11c4d3490>
+               └ <app.engine.orchestrator.Orchestrator object at 0x11c4ce580>
+
+  File "/Users/gegerot/crypto_trading_bot/backend/app/engine/strategies/manager.py", line 80, in evaluate
+    primary = candles_by_tf.get("15m") or candles_by_tf.get("5m") or candles_by_tf.get("1h")
+              │             │             │             │            │             └ <method 'get' of 'dict' objects>
+              │             │             │             │            └ {'1m':                 ts    open    high     low   close  volume                        dt
+              │             │             │             │              0    1778553960000  662.47  662.5...
+              │             │             │             └ <method 'get' of 'dict' objects>
+              │             │             └ {'1m':                 ts    open    high     low   close  volume                        dt
+              │             │               0    1778553960000  662.47  662.5...
+              │             └ <method 'get' of 'dict' objects>
+              └ {'1m':                 ts    open    high     low   close  volume                        dt
+                0    1778553960000  662.47  662.5...
+
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-05-12 11:35:34.778 | ERROR    | app.engine.orchestrator:_run:129 - orchestrator crashed: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 5
+               │     └ 8
+               └ <function _main at 0x105f77dc0>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 5
+           │    └ <function BaseProcess._bootstrap at 0x105d78670>
+           └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x105d75ca0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x105f93160>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+    │    └ <function subprocess_started at 0x10658edc0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=16636 started>
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x105f931c0>>
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ [<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000)>]
+           │       │   │    └ <function Server.serve at 0x106589ee0>
+           │       │   └ <uvicorn.server.Server object at 0x105f931c0>
+           │       └ <function run at 0x105fa4820>
+           └ <module 'asyncio' from '/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/a...
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x1067e03c0>
+           │    └ <cyfunction Loop.run_until_complete at 0x106808040>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+> File "/Users/gegerot/crypto_trading_bot/backend/app/engine/orchestrator.py", line 120, in _run
+    await self._tick(config)
+          │    │     └ BotConfig(duration_seconds=900, strategy_category=<StrategyCategory.MEDIUM: 'medium'>, auto_switch=False, tokens=['0xbb4CdB9C...
+          │    └ <function Orchestrator._tick at 0x132aa6ca0>
+          └ <app.engine.orchestrator.Orchestrator object at 0x11c4ce580>
+
+  File "/Users/gegerot/crypto_trading_bot/backend/app/engine/orchestrator.py", line 167, in _tick
+    sig_pair = self.strategy.evaluate(
+               │    │        └ <function StrategyManager.evaluate at 0x11c3f1280>
+               │    └ <app.engine.strategies.manager.StrategyManager object at 0x11c4d3490>
+               └ <app.engine.orchestrator.Orchestrator object at 0x11c4ce580>
+
+  File "/Users/gegerot/crypto_trading_bot/backend/app/engine/strategies/manager.py", line 80, in evaluate
+    primary = candles_by_tf.get("15m") or candles_by_tf.get("5m") or candles_by_tf.get("1h")
+              │             │             │             │            │             └ <method 'get' of 'dict' objects>
+              │             │             │             │            └ {'1m':                 ts    open    high     low   close  volume                        dt
+              │             │             │             │              0    1778553960000  662.47  662.5...
+              │             │             │             └ <method 'get' of 'dict' objects>
+              │             │             └ {'1m':                 ts    open    high     low   close  volume                        dt
+              │             │               0    1778553960000  662.47  662.5...
+              │             └ <method 'get' of 'dict' objects>
+              └ {'1m':                 ts    open    high     low   close  volume                        dt
+                0    1778553960000  662.47  662.5...
+
+  File "/Users/gegerot/crypto_trading_bot/backend/.venv/lib/python3.9/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-05-12 11:40:13.160 | ERROR    | app.engine.risk.manager:trip_kill_switch:110 - KILL SWITCH ENGAGED: manual_kill_switch
+2026-05-12 11:46:28.677 | ERROR    | app.engine.risk.manager:trip_kill_switch:112 - KILL SWITCH ENGAGED: manual_kill_switch
+2026-05-12 11:51:09.304 | ERROR    | app.engine.risk.manager:trip_kill_switch:112 - KILL SWITCH ENGAGED: manual_kill_switch
+2026-05-12 12:22:24.064 | ERROR    | app.engine.risk.manager:trip_kill_switch:112 - KILL SWITCH ENGAGED: manual_kill_switch
+2026-05-12 15:41:31.799 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:31.808 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:31.811 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:31.812 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:36.834 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:36.835 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:36.836 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:36.837 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:41.865 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:41.866 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:41.867 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:41.867 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:43.237 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:46.886 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:46.887 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:46.888 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:46.889 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:51.912 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:51.917 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:51.918 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:51.918 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:56.943 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:56.944 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:56.944 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:41:56.945 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:01.958 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:01.959 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:01.960 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:01.961 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:06.977 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:06.979 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:06.980 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:06.981 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:11.994 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:11.995 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:11.996 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:11.998 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:17.009 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:17.011 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:17.011 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:17.012 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:22.025 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:22.026 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:22.027 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:22.027 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:27.040 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:27.042 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:27.042 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:27.043 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:32.055 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:32.056 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:32.057 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:32.058 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:37.072 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:37.074 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:37.075 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:37.075 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:42.089 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:42.091 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:42.092 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:42.093 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:43.224 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:47.106 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:47.107 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:47.108 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:47.109 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:52.123 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:52.124 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:52.125 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:52.125 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:57.141 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:57.143 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:57.143 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:42:57.144 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:02.158 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:02.160 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:02.161 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:02.162 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:07.176 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:07.177 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:07.178 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:07.179 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:12.194 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:12.195 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:12.196 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:12.197 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:17.212 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:17.214 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:17.215 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:17.216 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:22.232 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:22.234 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:22.235 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:22.235 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:27.250 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:27.251 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:27.252 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:27.253 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:32.266 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:32.268 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:32.269 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:32.269 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:37.284 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:37.285 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:37.286 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:37.286 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:42.314 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:42.318 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:42.319 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:42.319 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:43.220 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:47.352 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:47.355 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:47.355 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:47.356 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:52.394 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:52.399 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:52.400 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:43:52.400 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:44:07.447 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:44:07.457 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:44:07.458 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:44:07.458 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:44:22.490 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:44:22.492 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:44:22.492 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:44:22.493 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:44:37.515 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:44:37.523 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:44:37.523 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:44:37.524 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:44:52.549 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:44:52.553 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:44:52.554 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:44:52.555 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:44:53.220 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: 
+2026-05-12 15:45:07.587 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:45:07.591 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:45:07.592 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:45:07.594 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:45:21.164 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:21.172 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:21.174 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:21.175 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:26.248 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:26.258 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:26.259 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:26.259 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:31.322 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:31.327 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:31.328 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:31.328 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:36.355 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:36.357 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:36.359 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:36.360 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:41.389 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:41.394 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:41.395 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:41.395 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:43.225 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:46.416 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:46.417 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:46.419 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:46.420 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:51.440 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:51.442 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:51.442 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:45:51.443 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-12 15:48:34.262 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:48:34.271 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:48:34.271 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:48:34.272 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:48:49.302 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-12 15:48:49.315 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-12 15:48:49.315 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-12 15:48:49.316 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-12 15:48:53.276 | ERROR    | app.engine.data.market_data:fetch_ohlcv:83 - market_data fetch failed for BTCUSDT 1m: 
+2026-05-13 16:25:53.073 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 16:38:02.075 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 16:54:53.828 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BTCUSDT 1h: 
+2026-05-13 17:00:06.467 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BTCUSDT 1m: Server error '500 Internal Server Error' for url 'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=200'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+2026-05-13 17:00:06.612 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BTCUSDT 15m: Server error '500 Internal Server Error' for url 'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=200'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
