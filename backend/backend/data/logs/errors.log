@@ -329,3 +329,4 @@ ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), 
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
 2026-05-13 17:00:06.612 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BTCUSDT 15m: Server error '500 Internal Server Error' for url 'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=200'
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+2026-05-13 18:32:06.323 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
