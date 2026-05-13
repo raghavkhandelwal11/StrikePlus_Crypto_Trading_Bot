@@ -4,6 +4,7 @@ import Chart from '../components/Chart';
 import ChartHeader from '../components/ChartHeader';
 import HistoryTab from '../components/HistoryTab';
 import LogsPanel from '../components/LogsPanel';
+import Logo from '../components/Logo';
 import NewWindowForm from '../components/NewWindowForm';
 import StatusPanel from '../components/StatusPanel';
 import TerminateButton from '../components/TerminateButton';
@@ -108,16 +109,26 @@ export default function Dashboard() {
 
   return (
     <main className="min-h-screen bg-bg text-gray-100">
+      {/* Full-width brand strip — sits above everything else, including the
+          BTC/ETH/BNB ticker. Slight bottom border and panel background give
+          it a navbar feel without taking too much vertical space. */}
+      <header className="border-b border-panel2 bg-panel/60 backdrop-blur-sm">
+        <div className="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between gap-4 flex-wrap">
+          <Logo />
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-gray-500">
+              PancakeSwap V2
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.25em] bg-good/10 text-good border border-good/30 px-2 py-1 rounded">
+              Paper
+            </span>
+          </div>
+        </div>
+      </header>
+
       <div className="max-w-screen-2xl mx-auto p-4 space-y-4">
 
         <TopTicker />
-
-        <header className="flex items-center justify-between gap-4 flex-wrap">
-          <div className="flex items-center gap-2">
-            <h1 className="text-xl font-semibold">Crypto Trading Bot</h1>
-            <span className="text-gray-500 text-sm">BSC / PancakeSwap</span>
-          </div>
-        </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           <section className="lg:col-span-3 space-y-4">

@@ -29,9 +29,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Crypto Trading Bot",
+    title="StrikePlus API",
     version="0.1.0",
-    description="Decentralized BSC/PancakeSwap trading bot — paper + live modes.",
+    description="StrikePlus — adaptive algo trading on Binance Smart Chain via PancakeSwap V2. Paper + live modes.",
     lifespan=lifespan,
 )
 

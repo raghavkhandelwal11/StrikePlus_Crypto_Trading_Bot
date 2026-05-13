@@ -3548,3 +3548,20 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-05-13 17:59:55.726 | WARNING  | app.engine.strategies.manager:evaluate_all:125 - strategy smart_trend raised: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
 2026-05-13 18:00:00.093 | WARNING  | app.engine.orchestrator:kill_window:168 - window 059e6c27 KILL — closing positions
 2026-05-13 18:08:40.407 | INFO     | app.engine.orchestrator:_run_window:217 - window 73c74bf3 deadline reached — closing positions
+2026-05-13 18:10:19.328 | INFO     | app.engine.window:create:156 - window created 6b52b412 duration=3600s deploy<=500.0
+2026-05-13 18:11:19.175 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:19.433 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:19.605 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:19.777 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:19.954 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.127 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.302 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.459 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.635 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.799 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:20.966 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:21.131 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:21.297 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:11:21.465 | INFO     | app.engine.orchestrator:extend_window:179 - window 6b52b412 extended by 10800s
+2026-05-13 18:23:15.742 | WARNING  | app.engine.ai.lstm:load:50 - torch not installed — LSTM disabled. `pip install torch` to enable.
+2026-05-13 18:23:15.742 | WARNING  | app.engine.ai.confirmation:__init__:36 - AI is enabled but no models are loaded. Train via scripts/train_ai.py. AI will pass through (not block) signals until trained.
