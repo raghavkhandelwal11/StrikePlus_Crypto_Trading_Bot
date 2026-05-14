@@ -21,12 +21,13 @@ from app.engine.strategies.stable_swing import StableSwingStrategy
 from app.engine.strategies.vwap import VwapStrategy
 
 # Regime -> ordered list of preferred strategy names.
-# `smart_trend` is preferred whenever we're in any trend regime.
+# Wider pools so each regime has 5+ candidates — keeps the bot from
+# starving for setups when its top-preference strategy isn't firing.
 _REGIME_PREFERENCE: Dict[str, List[str]] = {
-    "trend_up":   ["smart_trend", "breakout", "ema_rsi", "vwap"],
-    "trend_down": ["smart_trend", "ema_rsi", "vwap"],
-    "range":      ["mean_reversion", "vwap", "grid", "stable_swing"],
-    "high_vol":   ["smart_trend", "momentum_scalp"],
+    "trend_up":   ["smart_trend", "breakout", "ema_rsi", "vwap", "momentum_scalp", "mean_reversion"],
+    "trend_down": ["smart_trend", "ema_rsi", "vwap", "mean_reversion"],
+    "range":      ["mean_reversion", "vwap", "grid", "stable_swing", "ema_rsi"],
+    "high_vol":   ["smart_trend", "momentum_scalp", "breakout", "mean_reversion"],
 }
 
 
@@ -60,15 +61,13 @@ class StrategyManager:
     ) -> List[BaseStrategy]:
         """Return strategies in priority order for the regime.
 
-        If `category` is provided, only return strategies of that category
-        (intersected with regime preference, fallback to all of category).
+        NOTE — `category` no longer FILTERS strategies. It only signals the
+        user's risk appetite, which the orchestrator translates into quality
+        thresholds (min_conf, min_agree, persistence, warmup). The strategy
+        pool itself is regime-driven so the bot doesn't starve for setups.
         """
         names = _REGIME_PREFERENCE.get(regime, [])
         ordered = [self._all[n] for n in names if n in self._all]
-        if category is not None:
-            ordered = [s for s in ordered if s.category == category]
-            if not ordered:
-                ordered = self._eligible(category)
         return ordered
 
     def evaluate(

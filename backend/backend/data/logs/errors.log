@@ -330,3 +330,499 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-05-13 17:00:06.612 | ERROR    | app.engine.data.market_data:fetch_ohlcv:84 - market_data fetch failed for BTCUSDT 15m: Server error '500 Internal Server Error' for url 'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=200'
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
 2026-05-13 18:32:06.323 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 19:00:45.449 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 19:00:45.453 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-13 19:00:45.454 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 19:00:45.455 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 19:00:45.456 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-13 19:00:46.346 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: 
+2026-05-13 19:00:46.349 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: 
+2026-05-13 19:00:46.350 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: 
+2026-05-13 19:00:55.472 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: 
+2026-05-13 19:00:55.475 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: 
+2026-05-13 19:01:01.384 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: 
+2026-05-13 19:01:01.386 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: 
+2026-05-13 19:01:01.387 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: 
+2026-05-13 19:01:01.387 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: 
+2026-05-13 19:01:10.518 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 19:01:10.522 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 19:01:10.523 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 19:01:10.590 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-13 19:01:16.409 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: 
+2026-05-13 19:01:16.412 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: 
+2026-05-13 19:01:20.617 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: 
+2026-05-13 19:01:20.619 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: 
+2026-05-13 19:01:20.620 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: 
+2026-05-13 19:01:21.484 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: 
+2026-05-13 19:04:20.009 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: 
+2026-05-13 19:15:24.665 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 19:15:24.671 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 19:15:24.673 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-13 19:15:24.674 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 19:15:24.675 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-13 19:15:25.656 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: 
+2026-05-13 19:15:25.660 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: 
+2026-05-13 19:15:25.662 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: 
+2026-05-13 19:46:53.898 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 21:08:43.549 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-13 21:08:43.562 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 21:08:43.576 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-13 21:08:43.579 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 21:08:43.582 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 21:53:20.363 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-13 21:53:20.368 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-13 21:53:20.369 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-13 21:53:20.370 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-13 21:53:20.374 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-13 21:53:21.335 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 22:13:09.582 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: 
+2026-05-13 23:20:01.654 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: 
+2026-05-13 23:37:04.760 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: 
+2026-05-13 23:37:04.762 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: 
+2026-05-13 23:37:04.764 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: 
+2026-05-13 23:37:04.764 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: 
+2026-05-13 23:37:04.766 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: 
+2026-05-13 23:37:14.784 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: 
+2026-05-13 23:37:14.786 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: 
+2026-05-13 23:37:14.787 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: 
+2026-05-13 23:37:14.788 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: 
+2026-05-13 23:37:14.789 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: 
+2026-05-13 23:37:24.804 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: 
+2026-05-13 23:37:24.812 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: 
+2026-05-13 23:37:24.812 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: 
+2026-05-13 23:37:24.813 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: 
+2026-05-13 23:37:24.814 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: 
+2026-05-13 23:37:27.204 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:27.207 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:27.209 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:27.212 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:27.213 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:27.226 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.243 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.246 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.247 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.247 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.248 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.268 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.268 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.269 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.270 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.270 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.277 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.278 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.278 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.278 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.279 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.285 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.285 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.286 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.286 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.287 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.292 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.292 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.293 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.293 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.293 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.298 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.299 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.299 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.300 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.300 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.305 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.305 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.306 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.306 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.307 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.312 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.313 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.314 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.315 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.315 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.320 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.321 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.322 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.323 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.323 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.328 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.329 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.330 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.330 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.331 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:32.335 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.362 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.364 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.365 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.365 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.366 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.383 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.387 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.388 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.388 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.389 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.396 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.396 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.397 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.398 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.398 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.404 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.405 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.405 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.406 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.406 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.412 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.412 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.413 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.413 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.414 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.418 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.419 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.420 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.420 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.420 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.425 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.425 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.426 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.427 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.427 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.432 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.433 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.433 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.434 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.434 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.439 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.440 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.440 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.441 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.441 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.446 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.447 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.448 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.448 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.449 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:37.453 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.462 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.463 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.464 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.465 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.465 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.478 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.478 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.479 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.480 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.481 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.489 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.490 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.490 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.491 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.491 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.498 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.499 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.499 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.500 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.500 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.508 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.508 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.509 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.509 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.510 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.517 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.517 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.519 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.520 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.521 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.528 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.528 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.529 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.529 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.530 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.536 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.537 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.537 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.538 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.538 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.543 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.544 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.544 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.545 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.545 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.550 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.551 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.551 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.552 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.552 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:42.556 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.576 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.578 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.578 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.578 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.579 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.589 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.590 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.591 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.591 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.592 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.600 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.600 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.601 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.602 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.602 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.607 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.608 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.609 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.609 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.610 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.615 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.616 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.616 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.617 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.617 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.623 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.623 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.624 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.624 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.624 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.631 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.631 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.631 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.632 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.632 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.638 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.638 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.639 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.639 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.639 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.644 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.645 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.645 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.646 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.646 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.652 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.653 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.653 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.654 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.654 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:47.659 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:51.418 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1d: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:51.474 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:51.480 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1d: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.674 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.675 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.676 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.677 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.678 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.697 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.697 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.698 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.699 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.700 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.707 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.707 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.708 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.709 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.709 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.715 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.716 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.716 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.717 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.717 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.724 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.724 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.725 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.725 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.726 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.731 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.732 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.732 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.733 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.733 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.741 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.741 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.742 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.743 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.744 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.751 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.751 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.752 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.753 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.753 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.759 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.760 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.761 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.761 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.762 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.767 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.768 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.768 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.769 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.769 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:52.772 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.782 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.783 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.783 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.784 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.785 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.794 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.795 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.796 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.797 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.797 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.805 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.806 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.806 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.806 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.807 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.814 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.815 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.815 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.817 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.817 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.823 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.824 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.825 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.826 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.827 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.834 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.834 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.836 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.836 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.837 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.842 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.842 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.843 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.843 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.844 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.849 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.849 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.850 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.850 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.850 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.855 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.856 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.856 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.858 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.858 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.862 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.863 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.863 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.865 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.865 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:37:57.869 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.893 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.895 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.895 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.896 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.896 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.910 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.912 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.912 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.913 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.913 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.920 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.920 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.920 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.921 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.921 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.927 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.927 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.928 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.928 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.929 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.933 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.934 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.934 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.935 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.935 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for MATICUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.940 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.941 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.941 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.942 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.942 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for SOLUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.947 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.948 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.948 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.949 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.949 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.954 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.955 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.955 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.955 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.956 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.961 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.962 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.962 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.963 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.963 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for CAKEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.968 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 5m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.969 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.970 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.970 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.971 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-13 23:38:02.975 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:32.106 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:32.121 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:32.123 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:32.124 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:33.253 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:33.332 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:33.348 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:33.376 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:33.475 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:34.498 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:34.503 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for XRPUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:34.505 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:35.455 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 15m: [Errno 8] nodename nor servname provided, or not known
+2026-05-14 01:10:38.443 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: 
+2026-05-14 02:26:33.498 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: 
+2026-05-14 02:26:33.507 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: 
+2026-05-14 02:26:33.508 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: 
+2026-05-14 02:26:33.510 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: 
+2026-05-14 02:26:33.511 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: 
+2026-05-14 02:26:33.540 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-14 02:26:33.542 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-14 02:26:33.543 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-14 02:26:33.544 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-14 02:26:33.546 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-14 02:26:33.559 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: 
+2026-05-14 02:26:33.560 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: 
+2026-05-14 02:26:33.561 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: 
+2026-05-14 02:26:33.563 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: 
+2026-05-14 02:26:33.564 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1h: 
+2026-05-14 02:43:23.880 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: 
+2026-05-14 02:43:23.882 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: 
+2026-05-14 02:43:23.882 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: 
+2026-05-14 02:43:23.884 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: 
+2026-05-14 02:43:23.885 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: 
+2026-05-14 02:58:29.844 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: 
+2026-05-14 02:58:29.859 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: 
+2026-05-14 02:58:29.861 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: 
+2026-05-14 02:58:29.863 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: 
+2026-05-14 02:58:29.864 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: 
+2026-05-14 02:58:29.888 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-14 02:58:29.888 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-14 02:58:29.891 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-14 03:12:04.111 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BTCUSDT 1m: 
+2026-05-14 03:12:04.685 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: 
+2026-05-14 03:12:06.210 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-14 04:13:03.990 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 5m: 
+2026-05-14 04:13:03.997 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 15m: 
+2026-05-14 04:13:03.997 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1h: 
+2026-05-14 04:13:03.998 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 4h: 
+2026-05-14 04:13:03.999 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for DOGEUSDT 1m: 
+2026-05-14 05:14:04.489 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ADAUSDT 1m: 
+2026-05-14 07:00:31.998 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-14 08:10:13.082 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 5m: 
+2026-05-14 08:10:13.088 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-14 08:10:13.091 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 4h: 
+2026-05-14 08:10:13.092 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-14 08:10:13.094 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1h: 
+2026-05-14 08:10:13.119 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1m: 
+2026-05-14 08:10:13.127 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 5m: 
+2026-05-14 08:10:13.130 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 4h: 
+2026-05-14 08:10:13.130 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 15m: 
+2026-05-14 08:10:13.131 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for ETHUSDT 1h: 
+2026-05-14 08:36:21.614 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 15m: 
+2026-05-14 08:45:44.779 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BNBUSDT 1m: 
+2026-05-14 09:38:49.569 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 1m: 
+2026-05-14 09:38:49.570 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 5m: 
+2026-05-14 09:38:49.570 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 4h: 
+2026-05-14 09:38:49.571 | ERROR    | app.engine.data.market_data:fetch_ohlcv:89 - market_data fetch failed for BUSDUSDT 15m: 

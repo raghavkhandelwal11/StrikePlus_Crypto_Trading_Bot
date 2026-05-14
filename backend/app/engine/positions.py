@@ -32,6 +32,8 @@ class Position:
     target_usd: float = 0.0                # full intended position size (Kelly-lite target)
     pyramid_step: int = 0                  # # of add-on legs done (0 = just opened)
     scale_outs_done: int = 0               # # of partial profit-takes done (max 1)
+    entry_fees_paid_usd: float = 0.0       # cumulative buy-side fees (gas + LP)
+                                            # — used to compute NET pnl on exit
 
     def is_open(self) -> bool:
         return self.units > 1e-9
@@ -63,6 +65,7 @@ class Position:
             "target_usd": self.target_usd,
             "pyramid_step": self.pyramid_step,
             "scale_outs_done": self.scale_outs_done,
+            "entry_fees_paid_usd": self.entry_fees_paid_usd,
         }
         if mark_price is not None:
             d["mark_price"] = mark_price
@@ -114,12 +117,17 @@ class PositionTracker:
         window_id: Optional[str] = None,
         target_usd: float = 0.0,
         is_pyramid: bool = False,
+        fees_paid_usd: float = 0.0,
     ) -> Position:
         """Open or add to a long position. Updates avg entry as a weighted mean.
 
         On initial open, records ATR-based stop/target and target_usd (the full
         intended position size for pyramiding). On pyramid adds, keeps the
         original stop/target (don't re-arm based on new bar) and bumps the step.
+
+        `fees_paid_usd` accumulates onto the position so that when we close
+        (in part or in full), apply_sell can deduct a proportional share of
+        the entry fees from the realized PnL — producing TRUE net profit.
         """
         key = self._key(token, window_id)
         p = self._positions.get(key) or Position(
@@ -135,6 +143,7 @@ class PositionTracker:
         p.strategy = strategy
         p.last_update = datetime.utcnow()
         p.high_water_mark = max(p.high_water_mark, fill_price)
+        p.entry_fees_paid_usd += max(0.0, fees_paid_usd)
         if first_entry:
             p.stop_loss = stop_loss
             p.take_profit = take_profit
@@ -155,20 +164,30 @@ class PositionTracker:
         units: float,
         fill_price: float,
         window_id: Optional[str] = None,
+        sell_fees_usd: float = 0.0,
     ) -> tuple[float, Optional[Position]]:
-        """Close all or part of a position. Returns (realized_pnl_usd, position_snapshot).
+        """Close all or part of a position. Returns (NET_realized_pnl_usd, position_snapshot).
 
-        Realized PnL is computed against the average entry price; cost basis is
-        reduced proportionally so partial closes preserve the per-unit entry.
+        NET PnL math:
+            gross  = (fill_price - avg_entry) * units
+            buy_fees_share   = entry_fees_paid_usd * (units / units_before)
+            net    = gross - buy_fees_share - sell_fees_usd
+
+        Cost basis AND entry-fee accumulator both reduce proportionally so
+        partial closes preserve the per-unit entry economics.
         """
         key = self._key(token, window_id)
         p = self._positions.get(key)
         if p is None or not p.is_open():
             return 0.0, None
         units = min(units, p.units)
-        realized = (fill_price - p.avg_entry_price) * units
         portion = units / p.units if p.units > 0 else 1.0
+        gross = (fill_price - p.avg_entry_price) * units
+        buy_fees_share = p.entry_fees_paid_usd * portion
+        net_realized = gross - buy_fees_share - max(0.0, sell_fees_usd)
+
         p.cost_basis_usd *= (1.0 - portion)
+        p.entry_fees_paid_usd *= (1.0 - portion)
         p.units -= units
         p.last_update = datetime.utcnow()
         if p.units < 1e-9:
@@ -184,7 +203,8 @@ class PositionTracker:
             p.target_usd = 0.0
             p.pyramid_step = 0
             p.scale_outs_done = 0
-        return realized, p
+            p.entry_fees_paid_usd = 0.0
+        return net_realized, p
 
     def update_mark(self, token: str, price: float) -> None:
         """Bump the high-water mark on EVERY position holding this token.

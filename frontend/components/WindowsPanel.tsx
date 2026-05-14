@@ -147,19 +147,26 @@ function WindowCard({
         <PhaseBanner phase={w.phase} reasoning={w.reasoning} />
       )}
 
-      {/* Pairs being watched (compact chips) */}
-      <div className="flex items-center gap-2 mb-2 flex-wrap">
-        <span className="text-[10px] uppercase tracking-widest text-gray-500">Watching</span>
+      {/* Pairs being watched (just market context — NOT held positions).
+          Styled deliberately muted: smaller text, low-opacity colors,
+          explicit "24h" prefix, tooltip — so this row never gets mistaken
+          for the user's actual portfolio. */}
+      <div className="flex items-baseline gap-x-2 gap-y-1 mb-2 flex-wrap">
+        <span className="text-[9px] uppercase tracking-widest text-gray-600">
+          Watching · 24h
+        </span>
         {w.tokens.map(t => {
           const pair = pairs.find(p => p.token.toLowerCase() === t.toLowerCase());
           const sym = pair ? pair.label.split('/')[0] : `${t.slice(0, 6)}…`;
           const chg = pair?.price_change_pct;
           return (
-            <span key={t}
-                  className="text-xs bg-panel px-2 py-0.5 rounded font-medium flex items-center gap-1.5">
-              {sym}
+            <span
+              key={t}
+              title="24h price change on Binance — this is market context, not a held position"
+              className="text-[11px] inline-flex items-baseline gap-1">
+              <span className="text-gray-300 font-medium">{sym}</span>
               {chg != null && (
-                <span className={chg >= 0 ? 'text-good' : 'text-bad'}>
+                <span className={`tabular-nums ${chg >= 0 ? 'text-good/70' : 'text-bad/70'}`}>
                   {chg >= 0 ? '+' : ''}{chg.toFixed(2)}%
                 </span>
               )}
@@ -169,16 +176,23 @@ function WindowCard({
       </div>
 
       {/* Per-pair open positions */}
-      {positions.length > 0 && (
-        <div className="mb-3 space-y-1.5">
-          <div className="text-[10px] uppercase tracking-widest text-gray-500">
-            Open positions ({positions.length})
-          </div>
-          {positions.map(p => (
-            <PositionRow key={p.token} p={p} pairs={pairs} windowId={w.id} onChange={onChange} />
-          ))}
+      <div className="mb-3 space-y-1.5">
+        <div className="text-[10px] uppercase tracking-widest text-gray-500 flex items-center gap-2">
+          <span>Open positions</span>
+          <span className="bg-panel px-1.5 py-0.5 rounded text-gray-400 font-mono">
+            {positions.length}
+          </span>
         </div>
-      )}
+        {positions.length === 0 ? (
+          <div className="text-[11px] text-gray-500 italic py-1">
+            No positions yet — waiting for a qualifying setup.
+          </div>
+        ) : (
+          positions.map(p => (
+            <PositionRow key={p.token} p={p} pairs={pairs} windowId={w.id} onChange={onChange} />
+          ))
+        )}
+      </div>
 
       {/* Stats grid */}
       <div className="grid grid-cols-3 gap-2 text-xs mb-2">

@@ -11,7 +11,7 @@ import TerminateButton from '../components/TerminateButton';
 import TopTicker from '../components/TopTicker';
 import WindowsPanel from '../components/WindowsPanel';
 import { api, Pair, Position, TradingWindow } from '../lib/api';
-import { fmtPrice, fmtUsd } from '../lib/format';
+import { fmtPrice, fmtUsd, nowIST } from '../lib/format';
 import { useBotStream, BotEvent } from '../lib/useBotStream';
 
 const INTERVALS = ['1m', '5m', '15m', '1h', '4h', '1d'] as const;
@@ -52,7 +52,7 @@ export default function Dashboard() {
   }, [refresh]);
 
   useBotStream(useCallback((e: BotEvent) => {
-    const ts = new Date().toISOString().slice(11, 19);
+    const ts = nowIST();
     if (e.type === 'status')    setStatus(e.data);
     if (e.type === 'wallet')    setWallet(e.data);
     if (e.type === 'positions') setPositions(e.data || []);

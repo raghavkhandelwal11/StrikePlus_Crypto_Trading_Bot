@@ -120,13 +120,14 @@ class StrategyPerformance:
             if len(s.last_pnls) > 50:
                 s.last_pnls = s.last_pnls[-50:]
 
-            # Auto-disable: if last 10 trades are net-loss AND win rate < 35%,
-            # benched for 1 hour. The bot will re-evaluate after that.
+            # Auto-disable: needs at least 15 trades AND last 15 net-loss
+            # AND overall win rate <30%. The bot benches it for 30 min so
+            # other strategies get more time — not a death sentence.
             import time
-            if len(s.last_pnls) >= 10:
-                last10 = s.last_pnls[-10:]
-                if sum(last10) < 0 and s.win_rate < 0.35:
-                    s.disabled_until_ts = time.time() + 3600    # 1h cooldown
+            if len(s.last_pnls) >= 15:
+                last15 = s.last_pnls[-15:]
+                if sum(last15) < 0 and s.win_rate < 0.30:
+                    s.disabled_until_ts = time.time() + 1800    # 30min cooldown
             self._save()
 
     def is_disabled(self, strategy: str) -> bool:
@@ -140,17 +141,21 @@ class StrategyPerformance:
         return True
 
     def confidence_multiplier(self, strategy: str) -> float:
-        """Return a 0.5..1.3 multiplier to apply to a signal's confidence.
+        """Return a 0.7..1.25 multiplier to apply to a signal's confidence.
 
         Strategies with proven track records get boosted; underperformers shrink.
+        Requires 12+ trades before kicking in — early random noise shouldn't
+        choke off a strategy after a single bad streak.
         """
         s = self._stats.get(strategy)
-        if not s or s.trades < 5:
+        if not s or s.trades < 12:
             return 1.0                    # not enough data — neutral
-        # Map win_rate [0.30..0.65] -> [0.5..1.3], clipped
+        # Map win_rate [0.30..0.65] -> [0.7..1.25], clipped.
+        # Tightened from [0.5..1.3] so the multiplier can't single-handedly
+        # gate out a strategy whose raw confidence is right at threshold.
         wr = s.win_rate
-        mult = 0.5 + (wr - 0.30) / 0.35 * 0.8
-        return max(0.5, min(1.3, mult))
+        mult = 0.7 + (wr - 0.30) / 0.35 * 0.55
+        return max(0.7, min(1.25, mult))
 
     def snapshot(self) -> List[dict]:
         with self._lock:

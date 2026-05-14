@@ -1,6 +1,6 @@
 'use client';
 
-import { fmtPrice } from '../lib/format';
+import { fmtPrice, fmtTime } from '../lib/format';
 
 type Trade = {
   ts: string;
@@ -43,12 +43,12 @@ export default function TradesTable({ trades }: Props) {
           <table className="w-full text-xs">
             <thead className="text-left text-gray-400 sticky top-0 bg-panel">
               <tr>
-                <th className="py-1 pr-2">Time</th>
+                <th className="py-1 pr-2">Time (IST)</th>
                 <th className="pr-2">Strat</th>
                 <th className="pr-2">Side</th>
                 <th className="pr-2">Notional</th>
                 <th className="pr-2">Price</th>
-                <th className="pr-2">P&L</th>
+                <th className="pr-2">Net P&L</th>
                 <th className="pr-2">Fees</th>
                 <th className="pr-2">Reason</th>
               </tr>
@@ -58,7 +58,7 @@ export default function TradesTable({ trades }: Props) {
                 const fees = (t.gas_cost_usd ?? 0) + (t.lp_fee_usd ?? 0);
                 return (
                   <tr key={i} className="border-t border-panel2">
-                    <td className="py-1 pr-2 text-gray-400">{t.ts?.slice(11, 19) || '-'}</td>
+                    <td className="py-1 pr-2 text-gray-400">{fmtTime(t.ts)}</td>
                     <td className="pr-2">{t.strategy}</td>
                     <td className={`pr-2 ${t.side === 'buy' ? 'text-good' : 'text-bad'}`}>{t.side}</td>
                     <td className="pr-2">${fmt(t.notional_usd ?? 0)}</td>
@@ -80,7 +80,7 @@ export default function TradesTable({ trades }: Props) {
       <div className="mt-3 pt-3 border-t border-panel2 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
         <SummaryStat label="Total invested" value={`$${fmt(totalInvested)}`} />
         <SummaryStat
-          label="Net profit"
+          label="Net profit (after fees)"
           value={`$${netProfit >= 0 ? '+' : ''}${fmt(netProfit)}`}
           positive={netProfit >= 0}
         />

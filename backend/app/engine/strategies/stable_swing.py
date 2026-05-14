@@ -26,16 +26,16 @@ class StableSwingStrategy(BaseStrategy):
         r = rsi(df["close"], 14).iloc[-1]
         if pd.isna(r):
             return None
-        if r < 35:
+        if r < 40:
             return Signal(
-                side=Side.BUY, confidence=0.55, strategy=self.name,
+                side=Side.BUY, confidence=0.60, strategy=self.name,
                 reason=f"low-vol oversold (RSI {r:.0f})",
                 token_in=token_in, token_out=token_out,
                 suggested_amount_usd=capital_usd * 0.5,
             )
-        if r > 65:
+        if r > 60:
             return Signal(
-                side=Side.SELL, confidence=0.55, strategy=self.name,
+                side=Side.SELL, confidence=0.60, strategy=self.name,
                 reason=f"low-vol overbought (RSI {r:.0f})",
                 token_in=token_in, token_out=token_out,
                 suggested_amount_usd=capital_usd * 0.5,

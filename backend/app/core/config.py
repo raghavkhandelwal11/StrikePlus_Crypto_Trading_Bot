@@ -54,7 +54,10 @@ class Settings(BaseSettings):
     # Risk limits
     max_capital_per_trade_usd: float = 200.0
     min_capital_threshold_usd: float = 10.0
-    max_trades_per_hour: int = 6
+    # Bumped from 6 → 12: pyramid adds + scale-outs each count as a trade,
+    # so 6/hr really meant only ~1.5 NEW positions/hour. 12/hr gives ~3
+    # full position lifecycles per hour while still capping fee burn.
+    max_trades_per_hour: int = 12
     max_slippage_pct: float = 1.0
     max_daily_loss_pct: float = 5.0
     circuit_breaker_losses: int = 3
@@ -72,7 +75,7 @@ class Settings(BaseSettings):
     trailing_stop_pct: float = 1.0              # drawdown from peak to trigger
     max_holding_minutes: int = 240              # auto-close stale positions (0 = disabled)
     min_signal_confidence: float = 0.60         # don't act on weak signals (bumped from 0.55)
-    min_seconds_between_trades: int = 600       # per-token cooldown (bumped from 300)
+    min_seconds_between_trades: int = 180       # per-token cooldown (3 min — was 600/10 min, too patient)
     max_open_positions: int = 3                 # cap concurrent positions
     starting_paper_capital_usd: float = 1000.0  # paper-mode wallet float
 

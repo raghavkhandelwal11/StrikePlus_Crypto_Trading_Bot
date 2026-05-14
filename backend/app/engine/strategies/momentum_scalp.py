@@ -25,13 +25,15 @@ class MomentumScalpStrategy(BaseStrategy):
         r = rsi(df1["close"], 7).iloc[-1]
         r5 = rsi(df5["close"], 14).iloc[-1]
 
-        # Momentum: strong 3-bar move on 1m, RSI not yet overbought, 5m RSI rising.
+        # Momentum: 3-bar move on 1m, RSI not yet overbought, 5m RSI rising.
+        # Loosened threshold 0.5% → 0.3% so it fires on normal pushes, not just
+        # rare bursts. RSI window widened 55-75 → 52-78.
         if pd.isna(r) or pd.isna(r5):
             return None
-        if ret_3 > 0.005 and 55 < r < 75 and r5 > 50:
+        if ret_3 > 0.003 and 52 < r < 78 and r5 > 48:
             return Signal(
                 side=Side.BUY,
-                confidence=0.6,
+                confidence=0.62,
                 strategy=self.name,
                 reason=f"3-bar ret {ret_3*100:.2f}%, rsi1m {r:.0f}",
                 token_in=token_in,

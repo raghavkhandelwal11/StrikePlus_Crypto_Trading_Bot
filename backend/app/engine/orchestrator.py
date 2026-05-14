@@ -52,12 +52,21 @@ from app.engine.window import TradingWindow, window_manager
 
 
 # Map BSC token addresses (lowercased) → Binance OHLCV symbol pairs.
+# Every entry must (a) have an active BSC token contract, (b) hold real
+# liquidity on PancakeSwap V2, and (c) have a Binance USDT spot pair so
+# we can stream candles. The risk manager's MIN_LIQUIDITY_USD floor
+# protects against momentary thin-pool surprises.
 _SYMBOL_MAP = {
     "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": "BNBUSDT",     # WBNB
     "0xe9e7cea3dedca5984780bafc599bd69add087d56": "BUSDUSDT",    # BUSD
     "0x2170ed0880ac9a755fd29b2688956bd959f933f8": "ETHUSDT",     # ETH-peg
     "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c": "BTCUSDT",     # BTCB
     "0xcc42724c6683b7e57334c4e856f4c9965ed682bd": "MATICUSDT",   # MATIC-peg
+    "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82": "CAKEUSDT",    # CAKE (PancakeSwap-native)
+    "0x570a5d26f7765ecb712c0924e4de545b89fd43df": "SOLUSDT",     # SOL-peg
+    "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe": "XRPUSDT",     # XRP-peg
+    "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47": "ADAUSDT",     # ADA-peg
+    "0xba2ae424d960c26247dd6c32edc70b295c744c43": "DOGEUSDT",    # DOGE-peg
 }
 
 
@@ -78,9 +87,12 @@ def _binance_symbol(token: str) -> Optional[str]:
 # risk takes single-signal entries almost immediately.
 # ---------------------------------------------------------------------------
 _QUALITY: Dict[StrategyCategory, Dict[str, Any]] = {
-    StrategyCategory.LOW:    {"min_agree": 2, "min_conf": 0.70, "persistence": 3, "warmup_seconds": 90},
-    StrategyCategory.MEDIUM: {"min_agree": 2, "min_conf": 0.65, "persistence": 2, "warmup_seconds": 45},
-    StrategyCategory.HIGH:   {"min_agree": 1, "min_conf": 0.60, "persistence": 1, "warmup_seconds": 15},
+    # LOW   — patient. Demands multi-strategy agreement and high conviction.
+    # MED   — balanced. Acts on a single confirmed setup.
+    # HIGH  — aggressive. Takes most reasonable signals after a brief look.
+    StrategyCategory.LOW:    {"min_agree": 2, "min_conf": 0.65, "persistence": 2, "warmup_seconds": 45},
+    StrategyCategory.MEDIUM: {"min_agree": 1, "min_conf": 0.55, "persistence": 1, "warmup_seconds": 15},
+    StrategyCategory.HIGH:   {"min_agree": 1, "min_conf": 0.45, "persistence": 1, "warmup_seconds":  5},
 }
 
 
@@ -566,6 +578,9 @@ class Orchestrator:
         result = await self.executor.execute(intent)
 
         if result.status == OrderStatus.CONFIRMED and result.amount_out:
+            # Record entry fees on the position so apply_sell can deduct them
+            # later to produce true NET realized PnL (the GROSS bug fix).
+            entry_fees = (result.gas_cost_usd or 0.0) + (result.lp_fee_usd or 0.0)
             self.positions.apply_buy(
                 token=token_addr,
                 units=result.amount_out,
@@ -575,6 +590,7 @@ class Orchestrator:
                 take_profit=take_profit,
                 window_id=w.id,
                 target_usd=full_target_usd,         # full intended size for pyramid
+                fees_paid_usd=entry_fees,
             )
             if w.paper_mode:
                 self.wallet.paper_apply_buy(amount_in_usd)
@@ -666,10 +682,14 @@ class Orchestrator:
         # Snapshot cost basis BEFORE apply_sell zeros it out on a full close.
         cost_basis_to_release = position.cost_basis_usd
 
+        sell_fees = (result.gas_cost_usd or 0.0) + (result.lp_fee_usd or 0.0)
         realized, _ = self.positions.apply_sell(
             position.token, units, result.price or price,
             window_id=position.window_id,
+            sell_fees_usd=sell_fees,
         )
+        # `realized` is now NET of both the proportional entry fees AND
+        # this sell's fees — the fix for the gross-PnL bug.
         result.pnl_usd = realized
 
         if window:
@@ -762,12 +782,14 @@ class Orchestrator:
             logger.warning(f"window {w.id} pyramid add failed: {result.error}")
             return
 
+        add_fees = (result.gas_cost_usd or 0.0) + (result.lp_fee_usd or 0.0)
         self.positions.apply_buy(
             token=token_addr, units=result.amount_out,
             fill_price=result.price or current_price,
             strategy=signal.strategy,
             window_id=w.id,
             is_pyramid=True,
+            fees_paid_usd=add_fees,
         )
         if w.paper_mode:
             self.wallet.paper_apply_buy(add_usd)
@@ -819,10 +841,13 @@ class Orchestrator:
         result = await self.executor.execute(intent)
         proceeds = result.amount_out or 0.0
 
+        sell_fees = (result.gas_cost_usd or 0.0) + (result.lp_fee_usd or 0.0)
         realized, _ = self.positions.apply_sell(
             position.token, units_to_sell, result.price or current_price,
             window_id=position.window_id,
+            sell_fees_usd=sell_fees,
         )
+        # Net of allocated entry fees + this leg's sell fees.
         result.pnl_usd = realized
         position.scale_outs_done += 1
 

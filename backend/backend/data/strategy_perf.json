@@ -10,12 +10,55 @@
     "disabled_until_ts": null
   },
   "breakout": {
+    "trades": 2,
+    "wins": 0,
+    "gross_win_usd": 0.0,
+    "gross_loss_usd": 0.15117225436327125,
+    "last_pnls": [
+      -0.0696,
+      -0.0815
+    ],
+    "disabled_until_ts": null
+  },
+  "momentum_scalp": {
+    "trades": 2,
+    "wins": 1,
+    "gross_win_usd": 0.1856786274457609,
+    "gross_loss_usd": 0.10618472431262037,
+    "last_pnls": [
+      0.1857,
+      -0.1062
+    ],
+    "disabled_until_ts": null
+  },
+  "stable_swing": {
     "trades": 1,
     "wins": 0,
     "gross_win_usd": 0.0,
-    "gross_loss_usd": 0.06963848000924797,
+    "gross_loss_usd": 0.1497753369945069,
     "last_pnls": [
-      -0.0696
+      -0.1498
+    ],
+    "disabled_until_ts": null
+  },
+  "grid": {
+    "trades": 2,
+    "wins": 0,
+    "gross_win_usd": 0.0,
+    "gross_loss_usd": 0.28429818424933717,
+    "last_pnls": [
+      -0.1178,
+      -0.1665
+    ],
+    "disabled_until_ts": null
+  },
+  "mean_reversion": {
+    "trades": 1,
+    "wins": 0,
+    "gross_win_usd": 0.0,
+    "gross_loss_usd": 0.07499999999999933,
+    "last_pnls": [
+      -0.075
     ],
     "disabled_until_ts": null
   }

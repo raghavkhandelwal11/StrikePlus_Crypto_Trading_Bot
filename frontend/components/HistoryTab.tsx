@@ -2,7 +2,7 @@
 // Trade history tab — shows completed/killed/stopped windows in a compact
 // list, plus the full trades table.
 import { Pair, TradingWindow } from '../lib/api';
-import { fmtUsd } from '../lib/format';
+import { fmtUsd, fmtTimeShort } from '../lib/format';
 import TradesTable from './TradesTable';
 
 type Props = {
@@ -79,9 +79,10 @@ function PastWindowRow({ w, pairs }: { w: TradingWindow; pairs: Pair[] }) {
       </div>
 
       <div className="col-span-2 text-gray-400">
-        {started.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+        {fmtTimeShort(started)}
         <span className="text-gray-600 mx-1">→</span>
-        {ended.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+        {fmtTimeShort(ended)}
+        <span className="text-[9px] text-gray-600 ml-1">IST</span>
       </div>
 
       <div className="col-span-2 text-gray-400 font-mono">

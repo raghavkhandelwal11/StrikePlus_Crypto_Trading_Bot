@@ -114,6 +114,41 @@ def test_scale_out_preserves_avg_entry_and_basis_proportional():
     assert p.is_open()
 
 
+def test_apply_sell_returns_net_pnl_after_buy_and_sell_fees():
+    """A 10-unit position bought at 100 with $1 entry fee, closed at 110 with
+    $1 sell fee: gross = 100, net = 100 - 1 - 1 = 98."""
+    pt = PositionTracker()
+    pt.apply_buy(
+        token="0xABC", units=10, fill_price=100.0, strategy="x",
+        fees_paid_usd=1.0,
+    )
+    realized, _ = pt.apply_sell(
+        token="0xABC", units=10, fill_price=110.0, sell_fees_usd=1.0,
+    )
+    assert realized == pytest.approx(98.0)
+
+
+def test_partial_close_allocates_entry_fees_proportionally():
+    """Sell half → only half the entry fees should be deducted from this leg's PnL.
+    The remaining half stays on the position for the next close."""
+    pt = PositionTracker()
+    pt.apply_buy(
+        token="0xABC", units=10, fill_price=100.0, strategy="x",
+        fees_paid_usd=2.0,
+    )
+    # Sell 5 at 110 with $0.50 sell fee.
+    #   gross  = 5 * (110-100) = 50
+    #   entry  = 2.0 * (5/10) = 1.0
+    #   sell   = 0.50
+    #   net    = 50 - 1.0 - 0.5 = 48.5
+    realized, p = pt.apply_sell(
+        token="0xABC", units=5, fill_price=110.0, sell_fees_usd=0.5,
+    )
+    assert realized == pytest.approx(48.5)
+    # The position still holds 5 units and the remaining $1.00 of entry fees.
+    assert pt.get("0xabc").entry_fees_paid_usd == pytest.approx(1.0)
+
+
 def test_window_keyed_positions_are_isolated():
     """The same token in two different windows must NOT share a position."""
     pt = PositionTracker()

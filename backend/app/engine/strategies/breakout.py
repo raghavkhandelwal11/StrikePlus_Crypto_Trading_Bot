@@ -15,7 +15,9 @@ class BreakoutStrategy(BaseStrategy):
     category = StrategyCategory.HIGH
     required_timeframes = ["5m", "1h"]
 
-    def __init__(self, lookback: int = 20, vol_mult: float = 1.5):
+    def __init__(self, lookback: int = 20, vol_mult: float = 1.3):
+        # vol_mult 1.5× was rare on BSC pairs; 1.3× still requires real
+        # participation but fires often enough to be useful.
         self.lookback = lookback
         self.vol_mult = vol_mult
 

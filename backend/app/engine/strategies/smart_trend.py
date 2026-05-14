@@ -50,7 +50,8 @@ class SmartTrendStrategy(BaseStrategy):
 
         atr_pct = a / last_price
         # Volatility regime gate — too quiet = no follow-through; too wild = whipsaws.
-        if atr_pct < 0.004 or atr_pct > 0.030:
+        # Widened from (0.4%, 3%) to (0.3%, 3.5%) — catches more BNB/ETH ranges.
+        if atr_pct < 0.003 or atr_pct > 0.035:
             return None
 
         # --- 4h: macro trend must be UP ---
@@ -59,34 +60,36 @@ class SmartTrendStrategy(BaseStrategy):
         if pd.isna(e4h_fast) or pd.isna(e4h_slow) or e4h_fast <= e4h_slow:
             return None
 
-        # --- 1h: short-term trend up AND not extended (price within 1.5 ATR of EMA21) ---
+        # --- 1h: short-term trend up AND not extended (price within 2 ATR of EMA21) ---
         e1h = ema(df1h["close"], 21).iloc[-1]
         if pd.isna(e1h):
             return None
         if df1h["close"].iloc[-1] <= e1h:
             return None
         a1h = atr(df1h, 14).iloc[-1]
-        if pd.isna(a1h) or (df1h["close"].iloc[-1] - e1h) > 1.5 * a1h:
+        if pd.isna(a1h) or (df1h["close"].iloc[-1] - e1h) > 2.0 * a1h:
             return None      # too extended — let it pull back
 
         # --- 15m: oversold-then-recovering RSI (catch the bounce) ---
+        # Loosened: was need RSI 40→45 within last 6 bars. Now 45→42 anywhere
+        # in last 8 bars — catches gentler dips before the bounce.
         r15 = rsi(close15, 14)
-        recent_min = float(r15.iloc[-6:-1].min())
+        recent_min = float(r15.iloc[-8:-1].min())
         r_now = float(r15.iloc[-1])
-        if not (recent_min < 40 and r_now > 45):
+        if not (recent_min < 45 and r_now > 42):
             return None
 
-        # --- 15m: VWAP & EMA50 — price reclaiming key levels ---
+        # --- 15m: VWAP & EMA50 — price reclaiming key levels (tolerance loosened) ---
         v15 = vwap(df15).iloc[-1]
         e15_50 = ema(close15, 50).iloc[-1]
         if pd.isna(v15) or pd.isna(e15_50):
             return None
-        if last_price < min(v15, e15_50) * 0.999:
-            return None      # below both — not a clean reclaim
+        if last_price < min(v15, e15_50) * 0.995:    # was 0.999 — fragile
+            return None
 
-        # --- Volume confirmation ---
+        # --- Volume confirmation — any decent participation, not 1.1× ---
         vol_avg = df15["volume"].rolling(20).mean().iloc[-1]
-        if pd.isna(vol_avg) or df15["volume"].iloc[-1] < vol_avg * 1.1:
+        if pd.isna(vol_avg) or df15["volume"].iloc[-1] < vol_avg * 0.9:
             return None
 
         # All gates passed — build the signal with ATR-based stop/target.

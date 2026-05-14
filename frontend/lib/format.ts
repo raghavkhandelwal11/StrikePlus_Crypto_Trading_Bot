@@ -37,3 +37,56 @@ export function fmtPct(p: number | undefined | null, withSign = true): string {
   if (withSign && p > 0) return `+${v}%`;
   return `${v}%`;
 }
+
+// ---- Time / date — always formatted in IST (Asia/Kolkata) ----
+//
+// All UI timestamps are forced to India Standard Time per project owner.
+// The chart's own time-axis is left alone (lightweight-charts manages it).
+
+const IST_TIME = new Intl.DateTimeFormat('en-IN', {
+  timeZone: 'Asia/Kolkata',
+  hour: '2-digit', minute: '2-digit', second: '2-digit',
+  hour12: false,
+});
+
+const IST_HHMM = new Intl.DateTimeFormat('en-IN', {
+  timeZone: 'Asia/Kolkata',
+  hour: '2-digit', minute: '2-digit',
+  hour12: false,
+});
+
+const IST_DATETIME = new Intl.DateTimeFormat('en-IN', {
+  timeZone: 'Asia/Kolkata',
+  day: '2-digit', month: 'short',
+  hour: '2-digit', minute: '2-digit',
+  hour12: false,
+});
+
+function _parse(input: string | Date | number | null | undefined): Date | null {
+  if (input == null) return null;
+  const d = input instanceof Date ? input : new Date(input);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+/** HH:MM:SS in IST. Returns "—" if input is invalid. */
+export function fmtTime(input: string | Date | number | null | undefined): string {
+  const d = _parse(input); if (!d) return '—';
+  return IST_TIME.format(d);
+}
+
+/** HH:MM in IST — compact, for column views. */
+export function fmtTimeShort(input: string | Date | number | null | undefined): string {
+  const d = _parse(input); if (!d) return '—';
+  return IST_HHMM.format(d);
+}
+
+/** "12 May, 14:32" in IST. */
+export function fmtDateTime(input: string | Date | number | null | undefined): string {
+  const d = _parse(input); if (!d) return '—';
+  return IST_DATETIME.format(d);
+}
+
+/** Current wall-clock HH:MM:SS in IST — for log row timestamps. */
+export function nowIST(): string {
+  return IST_TIME.format(new Date());
+}

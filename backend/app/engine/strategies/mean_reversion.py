@@ -24,17 +24,19 @@ class MeanReversionStrategy(BaseStrategy):
         last = df["close"].iloc[-1]
         if pd.isna(lower.iloc[-1]) or pd.isna(r):
             return None
-        # Touched lower band, RSI oversold but turning up
-        if last <= lower.iloc[-1] * 1.001 and r < 35:
+        # Touched lower band, RSI oversold but turning up.
+        # Loosened RSI <35 → <40 to catch more bounces. Confidence 0.62 —
+        # two confirmations (BB + RSI) is a real edge, not 50/50.
+        if last <= lower.iloc[-1] * 1.001 and r < 40:
             return Signal(
-                side=Side.BUY, confidence=0.55, strategy=self.name,
+                side=Side.BUY, confidence=0.62, strategy=self.name,
                 reason=f"BB lower touch, RSI {r:.0f}",
                 token_in=token_in, token_out=token_out,
                 suggested_amount_usd=capital_usd * 0.8,
             )
-        if last >= upper.iloc[-1] * 0.999 and r > 70:
+        if last >= upper.iloc[-1] * 0.999 and r > 65:
             return Signal(
-                side=Side.SELL, confidence=0.55, strategy=self.name,
+                side=Side.SELL, confidence=0.62, strategy=self.name,
                 reason=f"BB upper touch, RSI {r:.0f}",
                 token_in=token_in, token_out=token_out,
                 suggested_amount_usd=capital_usd * 0.8,
